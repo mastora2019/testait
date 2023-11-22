@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    flex: 1;
+}
+
+.footer {
+    background-color: #f8f9fa; /* Set the background color of the footer */
+    padding: 20px; /* Add padding to the footer */
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
