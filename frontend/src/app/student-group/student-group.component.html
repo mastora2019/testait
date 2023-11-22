@@ -1,2 +1,34 @@
-<p>student-group works!</p>
+<div>
+  <h2>Student Groups</h2>
 
+  <!-- List of Student Groups -->
+  <ul>
+    <li *ngFor="let group of groups">
+      <h3>{{ group.name }}</h3>
+      <p>{{ group.description }}</p>
+      <button (click)="joinGroup(group._id)" class="join-button">Join Group</button>
+      <button (click)="viewGroupDetails(group._id)" class="details-button">Group Details</button>
+
+    </li>
+  </ul>
+
+  <!-- List of Existing Groups -->
+  <h3>List of Existing Groups</h3>
+  <ul>
+    <li>
+      <span class="group-name">Academic Group</span>
+      <button (click)="joinGroup('Academic Group')" class="join-button">Join Group</button>
+      <button (click)="viewGroupDetails('Academic Group')" class="details-button">viewGroupDetails </button>
+    </li>
+    <li>
+      <span class="group-name">Activities Group</span>
+      <button (click)="joinGroup('Activities Group')" class="join-button">Join Group</button>
+      <button (click)="viewGroupDetails('Activities Group')" class="details-button">viewGroupDetails</button>
+    </li>
+    <li>
+      <span class="group-name">Volunteer Group</span>
+      <button (click)="joinGroup('Volunteer Group')" class="join-button">Join Group</button>
+      <button (click)="viewGroupDetails('Volunteer Group')" class="details-button">viewGroupDetails</button>
+    </li>
+  </ul>
+</div>

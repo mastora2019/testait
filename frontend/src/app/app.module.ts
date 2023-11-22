@@ -11,8 +11,10 @@ import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
-import { GroupService } from '../app/group.service';
-import { StudentGroupComponent } from './student-group/student-group.component';
+import { GroupService } from './group.service';
+import { StudentGroupsComponent } from './student-group/student-group.component';
+import { StudentService } from './student.service';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,7 @@ import { StudentGroupComponent } from './student-group/student-group.component';
     LoginComponent,
     DashboardComponent,
     AdminDashboardComponent,
-    StudentGroupComponent
+    StudentGroupsComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,7 @@ import { StudentGroupComponent } from './student-group/student-group.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [AuthService,GroupService],
+  providers: [AuthService,GroupService,StudentService],
 
   bootstrap: [AppComponent]
 })

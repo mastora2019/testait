@@ -10,14 +10,13 @@ import { GroupService } from '../group.service';
   styleUrls: ['./admin-dashboard.component.css'],
 })
 export class AdminDashboardComponent implements OnInit {
-  groups: any[] = [];
+  groups: string[] = []; // Assuming groups are represented as strings in this example
   groupForm: FormGroup;
 
-  constructor(public groupService: GroupService, private fb: FormBuilder) {
+  constructor(private groupService: GroupService, private fb: FormBuilder) {
     this.groupForm = this.fb.group({
       name: [''],
       description: [''],
-      // Add other form controls as needed
     });
   }
 
@@ -26,29 +25,25 @@ export class AdminDashboardComponent implements OnInit {
   }
 
   loadGroups(): void {
-    this.groupService.getAllGroups().subscribe(
-      (groups) => {
-        this.groups = groups;
-      },
-      (error) => {
-        console.error('Error fetching groups', error);
-      }
-    );
+    // Load existing groups (you may fetch them from your service)
+    this.groups = ['Academic Group', 'Activities Group', 'Volunteer Group'];
   }
 
   createGroup(): void {
     const groupData = this.groupForm.value;
+
+    // Assuming your service returns the created group
     this.groupService.createGroup(groupData).subscribe(
-      (response) => {
-        // Handle success
-        this.loadGroups(); // Reload the groups after creating a new one
+      (createdGroup) => {
+        // Add the created group to the list
+        this.groups.push(createdGroup.name);
+
+        // Optionally, you can reset the form
+        this.groupForm.reset();
       },
       (error) => {
         console.error('Error creating group', error);
       }
     );
   }
-
-  // Implement methods for updating and deleting groups
-  
 }

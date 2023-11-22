@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StudentGroupComponent } from './student-group.component';
+import { StudentGroupsComponent } from './student-group.component';
 
 describe('StudentGroupComponent', () => {
-  let component: StudentGroupComponent;
-  let fixture: ComponentFixture<StudentGroupComponent>;
+  let component: StudentGroupsComponent;
+  let fixture: ComponentFixture<StudentGroupsComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [StudentGroupComponent]
+      declarations: [StudentGroupsComponent]
     });
-    fixture = TestBed.createComponent(StudentGroupComponent);
+    fixture = TestBed.createComponent(StudentGroupsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

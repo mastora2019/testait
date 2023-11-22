@@ -1,16 +1,18 @@
 <div>
   <h2>Admin Dashboard</h2>
 
+
   <!-- Group Creation Form -->
-  <form [formGroup]="groupForm" (ngSubmit)="createGroup()">
-    <label for="name">Group Name:</label>
-    <input type="text" id="name" formControlName="name">
+<form [formGroup]="groupForm" (ngSubmit)="createGroup()">
+  <label for="name">Group Name:</label>
+  <input type="text" id="name" formControlName="name">
 
-    <label for="description">Group Description:</label>
-    <textarea id="description" formControlName="description"></textarea>
+  <label for="description">Group Description:</label>
+  <textarea id="description" formControlName="description"></textarea>
 
-    <button type="submit">Create Group</button>
-  </form>
+  <button type="submit">Create Group</button>
+</form>
+
 
   <!-- List of Existing Groups -->
   <h3>List of Existing Groups</h3>

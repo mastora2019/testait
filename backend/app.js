@@ -4,6 +4,7 @@ const cors = require('cors');
 const authRoutes = require('./routes/authRoutes');
 const db = require('./config/db');
 const groupRoutes = require('./routes/groups');
+const studentRoutes = require ('./routes/student');
 
 const app = express();
 
