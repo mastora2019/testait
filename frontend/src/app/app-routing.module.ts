@@ -12,9 +12,8 @@ const routes: Routes = [
   { path: 'login', component:LoginComponent},
   { path: 'auth/dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   {path: 'admin-dashboard', component:AdminDashboardComponent},
-  {path: 'student-group', component:StudentGroupsComponent}
+  {path: 'student-group', component:StudentGroupsComponent},
   
-
 ];
 
 @NgModule({
@@ -22,3 +21,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

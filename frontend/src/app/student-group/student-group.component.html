@@ -32,3 +32,10 @@
     </li>
   </ul>
 </div>
+<!-- Add this modal section at the end of your component's HTML -->
+<div *ngIf="selectedGroup" class="modal">
+  <h2>{{ selectedGroup.name }}</h2>
+  <p>{{ selectedGroup.description }}</p>
+  <button (click)="closeModal()">Close</button>
+</div>
+
